@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #121213;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Kanit', sans-serif;
+}
+
+.wordle-grid {
+    margin-top: 1rem;
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: min-content;
+    height: min-content;
+}
+
+.letter {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #3a3a3a;
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+}
+
+.letter1:focus {
+    outline: none;
+}
+
+.wordle-title {
+    font-size: 3rem;
+    color: white;
+}
+
+.correct {
+    border: none;
+    transition: all 1s ease;
+    background: #538d4e;
+}
+
+.close {
+    transition: all 1s ease;
+    background: #b59f3b;
+    border: none;
+}
+
+.wrong {
+    transition: all 1s ease;
+    background: #3a3a3c;
+    border: none;
+}
+
+.nav-bar {
+    top: 0;
+    height: 4rem;
+    width: 100vw;
+    margin: 0;
+}
+
+.nav-bar-nav {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px;
+    list-style: none;
+}
+
+.item-one {
+    left: 20px;
+}
+
+.item-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word-reveal {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background: white;
+    margin-top: -59px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.error-message {
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 4rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.congrats {
+    transition: all 1.5s ease;
+    position: absolute;
+    margin-top: 50px;
+    border-radius: 10px;
+    background: white;
+    opacity: 0;
+    width: 320px;
+    height: 190px;
+}
+
+.congratsh1, 
+.congratsh2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.congratsh1 {
+    font-size: 2rem;
+}
+
+.congratsh2 {
+    background: white;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.visible {
+    opacity: 1;
+}
